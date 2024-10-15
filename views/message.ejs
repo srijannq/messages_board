@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= messages.text %></title>
+    <style>
+      body {
+        font-size: 30px;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color: #3a3a3a;
+      }
+      li {
+        list-style: circle;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>Message Text: <%=messages.text %></li>
+      <li>Message Author: <%=messages.user %></li>
+      <li>Date added: <%=messages.added %></li>
+    </ul>
+  </body>
+</html>

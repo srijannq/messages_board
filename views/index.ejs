@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Message List</title>
+    <style>
+      body {
+        background-color: #3a3a3a;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div style="text-align: center; font-size: 20px; margin-top: 20px">
+      <a href="new" style="color: blanchedalmond">
+        <span>Link to Add new Messages</span>
+      </a>
+    </div>
+
+    <% messages.forEach((message,index)=>{ %>
+    <ul>
+      <li><%= 'Message Text: ' + message.text %></li>
+      <li><%= 'Author: ' + message.user %></li>
+      <li><%= 'Date Added: ' + message.added %></li>
+      <li style="list-style: none; margin-top: 10px">
+        <a href="/message/<%= index %>"> <button>Open</button> </a>
+      </li>
+    </ul>
+    <% }) %>
+  </body>
+</html>
